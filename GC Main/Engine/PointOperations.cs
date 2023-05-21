@@ -65,7 +65,7 @@
 				j++;
 			}
 
-			Array.Sort(lines, LineComparers.polar_angle_and_distance);
+			Array.Sort(lines, LineComparers.polar);
 
 			ordered_points[0] = min;
 			for(int i = 1; i < points.Length; i++) {

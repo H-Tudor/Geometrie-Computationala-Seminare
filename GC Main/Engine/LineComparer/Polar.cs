@@ -1,5 +1,5 @@
 ﻿namespace GC.Engine.LineComparer {
-	public class PolarAngleAndDistanceComparer: IComparer<Line> {
+	public class PolarComparer: IComparer<Line> {
 
 		public int Compare(Line a, Line b) {
 			if(a == null || b == null)
