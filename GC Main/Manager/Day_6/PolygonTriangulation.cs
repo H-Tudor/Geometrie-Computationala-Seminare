@@ -12,7 +12,7 @@ namespace GC.Manager.Day_6 {
 
 			points = PolygonOperations.GeneratePolygonPoints(center, radius, points.Length);
 			graphics_handler.DrawSequence(points, graphics_handler.StandardColor, label: Config.DEV);
-			graphics_handler.DrawLines(TriangulationOperations.ConvexPolygonTriangulation(points), graphics_handler.ResultColor);
+			graphics_handler.DrawLines(TriangulationOperations.ConvexPolygon(points), graphics_handler.ResultColor);
 
 
 		}

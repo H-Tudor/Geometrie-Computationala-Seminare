@@ -6,7 +6,7 @@ namespace GC.Manager.Day_6 {
         public PointsTriangulation() { }
 
         public void Run(Point[] points, GraphicsHandler graphics_handler) {
-			graphics_handler.DrawLines(TriangulationOperations.PointArrayTriangulation(points), graphics_handler.ResultColor);
+			graphics_handler.DrawLines(TriangulationOperations.PointArray(points), graphics_handler.ResultColor);
 		}
 	}
 }
