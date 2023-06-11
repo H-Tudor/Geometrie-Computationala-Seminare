@@ -54,8 +54,8 @@ namespace GC.Engine {
 			int corner_start = start == 0 ? points.Length - 1 : start - 1;
 
 			bool convex_corner = PointPosToLine(points[corner_start], points[start], points[start + 1]) < 0;
-			int angle_1 = -1 * PointPosToLine(points[start], points[end], points[start + 1]);
-			int angle_2 = -1 * PointPosToLine(points[start], points[corner_start], points[end]);
+			int angle_1 = PointPosToLine(points[start], points[end], points[start + 1]);
+			int angle_2 = PointPosToLine(points[start], points[corner_start], points[end]);
 
 			return (convex_corner && angle_1 < 0 && angle_2 < 0) || !(angle_1 > 0 && angle_2 > 0);
 		}
@@ -106,8 +106,9 @@ namespace GC.Engine {
 			List<Line> edges = new List<Line>();
 			int corner_start, corner_end, check;
 
-			points = InverseTrigonometricSort(points);
-			Array.Sort(points, PointComparers.up_left);
+			//points = InverseTrigonometricSort(points);
+			//Array.Sort(points, PointComparers.up_left);
+
 			for(int i = 0; i < points.Length; i++) {
 				corner_start = i == 0 ? points.Length - 1 : i - 1;
 				corner_end = i == points.Length - 1 ? 0 : i + 1;

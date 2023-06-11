@@ -41,9 +41,9 @@ namespace GC.Resource {
 				new Manager.Day_8.PolygonSumArea(),
 				//new Manager.Day_8.TriangulationColorGraph(),
 			},
-			//new IExercise[] {
-			//	new Manager.Day_9.MonotonePolygonPartitioning()
-			//}
+			new IExercise[] {
+				new Manager.Day_9.MonotonePolygonPartitioning()
+			}
 		};
 	}
 }
